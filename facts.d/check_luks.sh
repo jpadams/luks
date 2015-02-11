@@ -1,3 +1,4 @@
 #! /bin/bash
 
-cryptsetup isLuks /dev/sda
+SDA=$(/sbin/cryptsetup isLuks /dev/sda 2>&1)
+echo luks_dev_sda=$SDA
